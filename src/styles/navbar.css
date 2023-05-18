@@ -1,0 +1,15 @@
+.navBar {
+  display: grid;
+  justify-content: right;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  background-color: #037340;
+  color: white;
+  height: 60px;
+}
+.img-logo-nav {
+  position: absolute;
+  width: 200px;
+  left: 5%;
+  top: 2px;
+}
