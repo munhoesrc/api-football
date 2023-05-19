@@ -4,9 +4,8 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 function Home() {
-  // const API = "https://v3.football.api-sports.io/status";
+  // const API = "https://v3.football.api-sports.io/countries";
   // const data = useGetData(API);
-  // console.log("teste", data);
 
   return (
     <div>
