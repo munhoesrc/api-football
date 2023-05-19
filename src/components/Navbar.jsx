@@ -15,6 +15,9 @@ const Navbar = () => {
         <li>
           <Link to="/coutries">PAISES</Link>
         </li>
+        <li>
+          <Link to="/seasons">TEMPORADA</Link>
+        </li>
       </ul>
     </nav>
   );

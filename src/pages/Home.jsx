@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import useGetData from "../services/requests";
+import "../styles/home.css";
 
 function Home() {
   const API = "https://v3.football.api-sports.io/fixtures?live=all";
@@ -12,7 +13,7 @@ function Home() {
   useEffect(() => {
     setPartidas(partidasData);
   }, [partidasData]);
-
+    
   return (
     <div>
       <Navbar />
@@ -23,6 +24,7 @@ function Home() {
             <div className="container-home" key={partida.fixture.id}>
               <div className="team-home">
                 <h1>{partida.teams.home.name}</h1>
+                <br />
                 <img
                   src={partida.teams.home.logo}
                   className="img-team"
@@ -36,6 +38,7 @@ function Home() {
               </div>
               <div className="team-away">
                 <h1>{partida.teams.away.name}</h1>
+                <br />
                 <img
                   src={partida.teams.away.logo}
                   className="img-team"
