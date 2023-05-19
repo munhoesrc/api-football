@@ -5,10 +5,10 @@ import useGetData from "../services/requests";
 import "../styles/home.css";
 
 function Home() {
-  const API = "https://v3.football.api-sports.io/fixtures?live=all";
+  const API_LIVE = "https://v3.football.api-sports.io/fixtures?live=all";
   const [partidas, setPartidas] = useState(null);
 
-  const partidasData = useGetData(API);
+  const partidasData = useGetData(API_LIVE);
 
   useEffect(() => {
     setPartidas(partidasData);
