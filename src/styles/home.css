@@ -16,17 +16,24 @@
   margin: 0;
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.container-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .container-home {
   background-color: #303134;
   margin-top: 48px;
-  margin-bottom: 48px;
   padding: 12px;
   border-radius: 10px;
   display: grid;
-  margin-left: 50%;
-  margin-right: 50%;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 24px;
   justify-items: center;
   align-items: center;
   box-shadow: 11px 10px 25px -1px rgba(0, 0, 0, 0.75);
@@ -42,31 +49,40 @@
 .team-home {
   background-color: #202124;
   border-radius: 15px;
-  width: 300px;
-  height: 300px;
+  width: 100px;
+  height: 110px;
 }
 
 .team-away {
   background-color: #202124;
   border-radius: 15px;
-  width: 300px;
-  height: 300px;
+  width: 100px;
+  height: 110px;
 }
 .team-away h1 {
   color: white;
-  font-size: 1em;
+  font-size: 0.75em;
   font-weight: lighter;
+  margin-top: 5px;
 }
+
+.div-vs {
+  color: white;
+  font-size: 0.75em;
+}
+
 .team-home h1 {
   color: white;
-  font-size: 1em;
+  font-size: 0.75em;
   font-weight: lighter;
+  margin-top: 5px;
 }
 
 .score {
   color: white;
+  font-size: 1em;
 }
 .img-team {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
 }
