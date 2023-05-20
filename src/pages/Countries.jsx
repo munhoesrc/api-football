@@ -11,10 +11,10 @@ function Countries() {
   const countriesData = useGetData(API_COUNTRIES);
 
   useEffect(() => {
-    if (countriesData.response) {
-      setCountries(countriesData.response);
+    if (countriesData) {
+      setCountries(countriesData);
     }
-    console.log(countriesData.response);
+    console.log(countriesData, 'AQUIIIII');
   }, [countriesData]);
 
   const handleCountrySelect = (country) => {
@@ -29,7 +29,7 @@ function Countries() {
         <ul>
           {countries && countries.map((country) => (
               <li
-                key={country.code}
+                key={`${country.code}-${country.name}`}
                 onClick={() => handleCountrySelect(country)}
                 style={{ cursor: "pointer" }}
               >
@@ -41,7 +41,7 @@ function Countries() {
           <div>
             <h2>{selectedCountry.name}</h2>
             <img
-              src={`https://media.api-sports.io/flags/${selectedCountry.country.code}.svg`}
+              src={`https://media.api-sports.io/flags/${selectedCountry.code}.svg`}
               alt={`${selectedCountry.name} Flag`}
             />
           </div>

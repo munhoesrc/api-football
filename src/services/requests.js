@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const useGetData = (API) => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {

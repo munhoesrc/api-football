@@ -6,12 +6,14 @@ import "../styles/home.css";
 
 function Home() {
   const API_LIVE = "https://v3.football.api-sports.io/fixtures?live=all";
-  const [partidas, setPartidas] = useState(null);
+  const [partidas, setPartidas] = useState([]);
 
   const partidasData = useGetData(API_LIVE);
 
   useEffect(() => {
-    setPartidas(partidasData);
+    if (partidasData && Array.isArray(partidasData)) {
+      setPartidas(partidasData);
+    }
   }, [partidasData]);
     
   return (
