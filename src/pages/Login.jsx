@@ -7,18 +7,30 @@ function Login() {
   const navigate = useNavigate();
 
   const [apiKey, setApiKey] = useState("");
-  const [error, setError] = useState("");
+  const [hasError, setHasError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const isValidApiKey = (key) => {
+    return key === "61aaeef8bd4807617135c75deb0bba21";
+  };
 
   const handleLogin = async (e) => {
     e.preventDefault();
 
     // Verifica se a API key está preenchida
     if (!apiKey) {
-      setError("Por favor, insira uma API key válida.");
+      setHasError(true);
+      setErrorMessage("Por favor, insira uma API key válida.");
       return;
     }
 
     // Verifica autenticidade da API key
+    if (!isValidApiKey(apiKey)) {
+      setHasError(true);
+      setErrorMessage("API key inválida. Por favor, verifique novamente.");
+      return;
+    }
+
     try {
       const response = await fetch("https://v3.football.api-sports.io/status", {
         headers: {
@@ -29,10 +41,12 @@ function Login() {
       if (response.ok) {
         navigate("/home");
       } else {
-        setError("API key inválida. Por favor, verifique novamente.");
+        setHasError(true);
+        setErrorMessage("API key inválida. Por favor, verifique novamente.");
       }
     } catch (error) {
-      setError(
+      setHasError(true);
+      setErrorMessage(
         "Ocorreu um erro ao verificar a API key. Por favor, tente novamente mais tarde."
       );
     }
@@ -47,7 +61,7 @@ function Login() {
         <div className="card-login">
           <h1>LOGIN</h1>
           <br />
-          {error && <p>{error}</p>}
+          {hasError && <p>{errorMessage}</p>}
           <form onSubmit={handleLogin}>
             <input
               type="text"
