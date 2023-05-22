@@ -17,14 +17,12 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    // Verifica se a API key está preenchida
     if (!apiKey) {
       setHasError(true);
       setErrorMessage("Por favor, insira uma API key válida.");
       return;
     }
 
-    // Verifica autenticidade da API key
     if (!isValidApiKey(apiKey)) {
       setHasError(true);
       setErrorMessage("API key inválida. Por favor, verifique novamente.");

@@ -19,10 +19,10 @@ const useGetData = (API) => {
         }
 
         const responseData = await response.json();
-        console.log(responseData.response);
+        
         setData(responseData.response);
       } catch (error) {
-        console.log("Ocorreu um erro:", error.message);
+        return error.message;
       }
     };
 

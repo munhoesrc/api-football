@@ -16,7 +16,6 @@ function Countries() {
     if (countriesData) {
       setCountries(countriesData);
     }
-    console.log(countriesData, 'AQUIIIII');
   }, [countriesData]);
 
   return (
