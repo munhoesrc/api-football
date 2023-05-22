@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
-.App-header {
+.header {
   display: grid;
   background-color: #4b435e;
   text-align: center;
@@ -14,6 +14,19 @@
   padding-top: 48px;
   font-family: Montserrat, sans-serif;
   margin: 0;
+}
+
+.container-inlive {
+  display: flex;
+  align-items: center;
+}
+
+.teste {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: -288px;
+  margin-left: 280px;
 }
 
 .row {
@@ -82,6 +95,7 @@
   color: white;
   font-size: 1em;
 }
+
 .img-team {
   width: 30px;
   height: 30px;

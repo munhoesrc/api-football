@@ -20,8 +20,13 @@ function Home() {
   return (
     <div>
       <Navbar />
-      <header className="App-header">
-        <h1 className="title-home">Partidas ao vivo</h1><div class="circle"></div>
+      <header className="header">
+          <div className="container-inlive" >
+            <div className="teste" >
+              <div className="circle"></div>
+            </div>
+              <h1 className="title-home">Partidas ao vivo</h1>
+          </div>
         <div className="container-wrapper">
           {partidas && partidas.length > 0 && (
             <div className="row">

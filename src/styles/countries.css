@@ -37,13 +37,14 @@
   margin-top: 30px;
 }
 
-h2 {
+.name-countries {
   font-size: 40px;
   color: white;
   margin-top: 20px;
 }
 
 img {
-  width: 100px;
+  width: 18%;
   height: auto;
+  border-radius: 10px;
 }

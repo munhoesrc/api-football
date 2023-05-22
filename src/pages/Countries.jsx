@@ -49,10 +49,10 @@ function Countries() {
         {selectedCountry && (
           <div className="selected-country">
             <img
-              src={`https://media.api-sports.io/flags/${selectedCountry.code}.svg`}
+              src={selectedCountry.flag}
               alt={`${selectedCountry.name} Flag`}
               />
-            <h2>{selectedCountry.name}</h2>
+            <h2 className="name-countries">{selectedCountry.name}</h2>
           </div>
         )}
       </div>
